@@ -33,27 +33,38 @@ class Game:
         while self.player_one.score < 3 and self.player_two.score < 3 == True:
             self.player_one.choose_gesture() 
             self.player_two.choose_gesture()
+            
             if self.player_one.current_gesture == self.player_two.current_gesture:
                 self.player_one.score = 0
                 self.player_two.score = 0
+
             elif self.player_one.current_gesture == "Rock" and (self.player_two.current_gesture == "Lizard" or "Scissors"):
                  self.player_one.score += 1
+
             elif self.player_one.current_gesture == "Scissors" and (self.player_two.current_gesture == "Paper" or "Lizard"):
                 self.player_one.score += 1
+
             elif self.player_one.current_gesture == "Paper" and (self.player_two.current_gesture == "Rock" or "Spock"):
                 self.player_one.score += 1 
+
             elif self.player_one.current_gesture == "Lizard" and (self.player_two.current_gesture == "Spock" or "Paper"):
                 self.player_one.score +=1
+
             elif self.player_one.current_gesture == "Spock" and (self.player_two.current_gesture == "Scissors" or "Rock"):
-                self.player_one.score += 1    
+                self.player_one.score += 1  
+
             elif self.player_two.current_gesture == "Rock" and (self.player_one.current_gesture == "Lizard" or "Scissors"):
                  self.player_two.score += 1
+
             elif self.player_two.current_gesture == "Scissors" and (self.player_one.current_gesture == "Paper" or "Lizard"):
                 self.player_two.score += 1
+
             elif self.player_two.current_gesture == "Paper" and (self.player_one.current_gesture == "Rock" or "Spock"):
                 self.player_two.score += 1 
+
             elif self.player_two.current_gesture == "Lizard" and (self.player_one.current_gesture == "Spock" or "Paper"):
-                self.player_two.score +=1
+                self.player_two.score += 1
+
             elif self.player_two.current_gesture == "Spock" and (self.player_one.current_gesture == "Scissors" or "Rock"):
                 self.player_two.score += 1   
             pass         
